@@ -1,0 +1,12 @@
+sentence = input("Enter a sentence: ")
+words = sentence.split(" ")
+
+print(f"Original            : {sentence}")
+print(f"UPPERCASE           : {sentence.upper()}")
+print(f"TitleCASE           : {sentence.title()}")
+print(f"Reversed            : {sentence[::-1]}")
+print(f"Total characters    : {len(sentence)}")
+print(f"Without spaces      : {len(sentence.replace(" ",""))}")
+print(f"Total words         : {len(words)}")
+print(f"Starts with cap     : {sentence.istitle()}")
+print(f"count of a          : {sentence.count("a")}")
