@@ -23,7 +23,7 @@ for i in range(0, 11, 2):
 
 # ----enumerate() - index + value together---------
 skills = ["Python", "AWS", "Business Analysis", "French"]
-for index, skill in enumerate(skills, 0):
+for index, skill in enumerate(skills, 1):
     print(f"{index}. {skill}")
 # 1. Python
 # 2. AWS
