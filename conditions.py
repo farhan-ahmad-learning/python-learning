@@ -35,3 +35,45 @@ else:
 age = int(input("Enter age: "))
 has_id = input("Do you have ID? (yes/no): ").lower()
 is_member = input("Are you a member? (yes/no): ").lower()
+
+# AND - both conditions must be True
+if age >= 18 and has_id == "yes":
+    print("Access granted!")
+else:
+    print("Access denied.")
+
+# OR - atleast one must be True
+if age >= 18 or is_member == "yes":
+    print("You qualify for discount.")
+else:
+    print("No discount available.")
+
+# NOT - reverses the condition
+if not has_id == "yes":
+    print("Please bring your ID  next time.")
+
+
+
+# NESTED CONDITIONS
+salary = float(input("Enter monthly salary: "))
+experience = int(input("Years of experience: "))
+has_certification = input("AWS certified? (yes/no)").lower()
+
+if salary >=50000:
+    if experience >= 3:
+        if has_certification == "yes":
+            print("Senior role - eligible for promotion!")
+        else:
+            print("Get certified to qualify for promotion.")
+    else:
+        print("Need 3+ years of experience for promotion.")
+else:
+    print("Salary below threshold for promotion.")
+
+# TERNARY OPERATOR - shorthand if/else in one line
+# result = value_if_true if condition else value_if_false
+status = "Adult" if age >= 18 else "Minor"
+print(f"Status: {status}")
+
+grade = "Pass" if score >= 40 else "Fail"
+print(f"Result: {grade}")
