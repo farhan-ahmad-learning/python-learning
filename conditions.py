@@ -1,3 +1,5 @@
+# Updated via Git terminal - Week 1
+
 # CONDITIONS - if / elif / else
 # Week 1 - Saturday
 
@@ -29,3 +31,7 @@ else:
 # and - both conditions must be True
 # or - atleast one condition must be True
 # not - reverses True to False or False to True
+
+age = int(input("Enter age: "))
+has_id = input("Do you have ID? (yes/no): ").lower()
+is_member = input("Are you a member? (yes/no): ").lower()
