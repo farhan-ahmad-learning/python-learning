@@ -96,3 +96,4 @@ for score in scores:
 print(f"Passed: {passed}")
 print(f"Failed: {failed}")
 print(f"Pass rate: {len(passed)}/{len(scores)}")
+print(f"Fail rate: {len(failed)}/{len(scores)}")
