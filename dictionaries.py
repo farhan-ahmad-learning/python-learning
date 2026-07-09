@@ -25,7 +25,7 @@ print(person.get("country"))                # None
 person["age"] = 36
 person["salary"] = 60000
 person["city"] = "Mumbai"
-del person["city"]
+#del person["city"]
 
 print(person)
 
@@ -34,6 +34,7 @@ print(person)
 if "salary" in person:
     print(f"Salary found: {person['salary']}")
 
+del person["city"]
 if "city" not in person:
     print(f"City key was deleted successfully.")
 
@@ -86,9 +87,11 @@ print(employees["EMP003"]["skills"][1]) # SQL
 
 # Loop through nested dictionary
 print(f"\n=====Employee Directory=====")
-for emp_id, details in employees.items():
-    print(f"\n{emp_id}:")
+for emp_na, details in employees.items():
+    print(f"\n{emp_na}:")
     print(f"Name        :   {details['name']}") 
     print(f"Department  :   {details['department']}")
     print(f"Salary      :   Rs. {details['salary']:,}")
     print(f"Skills      :   {', '.join(details['skills'])}")
+
+print(person.get("age"))
