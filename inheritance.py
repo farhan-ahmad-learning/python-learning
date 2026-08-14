@@ -165,6 +165,7 @@ class Director(Manager):
         """Approves a budget request."""
         if amount <= self.budget:
             print(f"Budget of Rs. {amount:,} approved by {self.name}")
+            self.budget -= amount
         else:
             print(f"Budget request of Rs. {amount} exceeds available Rs.{self.budget:,}")
 
