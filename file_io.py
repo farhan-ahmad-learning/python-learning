@@ -45,9 +45,9 @@ print("Skills file created!")
 
 # Read entire file as one string
 with open("test.txt", "r") as file:
-    content = file.read()
+    #content = file.read()
     print("====Full File Content====")
-    print(content)
+    print(file.read())
 
 # Read line by line
 with open("test.txt", "r") as file:
