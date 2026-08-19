@@ -149,3 +149,24 @@ print(f"98.6°F = {t2.value}°C")
 print(f"\nIs 0°C freezing? {Temperature.is_freezing(0)}")
 print(f"Is 25°C freezing? {Temperature.is_freezing(25)}")
 print(f"25°C in Fahrenheit: {Temperature.convert_to_fahrenheit(25)}")
+
+
+# Getters and Setters — @property
+class Student:
+    def __init__(self, name, age):
+        self._age = age    # _ means "private"
+
+    @property
+    def age(self):         # getter — read the value
+        return self._age
+
+    @age.setter
+    def age(self, value):  # setter — set with validation
+        if value < 0:
+            raise ValueError("Age cannot be negative!")
+        self._age = value
+
+s = Student("Farhan", 35)
+print(s.age)        # calls getter → 35
+s.age = 36          # calls setter → validates then sets
+s.age = -1          # raises ValueError!
